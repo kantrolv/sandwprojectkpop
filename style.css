@@ -158,3 +158,65 @@ footer {
         font-size: 1em;
     }
 }
+.secondary-footer {
+            width: 100%;
+            background-color: grey;
+            color: white;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 20px;
+            font-family:Sans-serif;
+            height:200px
+        }
+
+        .footer-section {
+            flex: 1 1 calc(25% - 20px);
+            min-width: 200px;
+            font-family:Sans-serif;
+        }
+
+        .footer-section h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+            font-family:Sans-serif;
+        }
+
+        .footer-section p, .footer-section a {
+            font-size: 16px;
+            color: white;
+            text-decoration: none;
+            font-family:Sans-serif;
+        }
+
+        .footer-section img {
+            width: 24px;
+            height: 24px;
+            margin-right: 10px;
+        }
+
+        .footer-section .social-icons {
+            display: flex;
+            align-items: center;
+            font-family:Sans-serif;
+        }
+
+        .footer-section input[type="text"] {
+            padding: 8px;
+            width: 100%;
+            border: none;
+            border-radius: 4px;
+            margin-top: 10px;
+            font-family:Sans-serif;
+        }
+
+        .footer-section .translate-box {
+            border: 1px solid #fff;
+            padding: 8px;
+            border-radius: 4px;
+            margin-top: 10px;
+            text-align: center;
+            background-color: #333;
+            font-family:Sans-serif;
+        }
