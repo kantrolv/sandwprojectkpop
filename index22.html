@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>K-Pop Fan Page</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+
+.secondary-footer {
+            width: 100%;
+            background-color: grey;
+            color: white;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 20px;
+            font-family:Sans-serif;
+            height:200px
+        }
+
+        .footer-section {
+            flex: 1 1 calc(25% - 20px);
+            min-width: 200px;
+            font-family:Sans-serif;
+        }
+
+        .footer-section h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+            font-family:Sans-serif;
+        }
+
+        .footer-section p, .footer-section a {
+            font-size: 16px;
+            color: white;
+            text-decoration: none;
+            font-family:Sans-serif;
+        }
+
+        .footer-section img {
+            width: 24px;
+            height: 24px;
+            margin-right: 10px;
+        }
+
+        .footer-section .social-icons {
+            display: flex;
+            align-items: center;
+            font-family:Sans-serif;
+        }
+
+        .footer-section input[type="text"] {
+            padding: 8px;
+            width: 100%;
+            border: none;
+            border-radius: 4px;
+            margin-top: 10px;
+            font-family:Sans-serif;
+        }
+
+        .footer-section .translate-box {
+            border: 1px solid #fff;
+            padding: 8px;
+            border-radius: 4px;
+            margin-top: 10px;
+            text-align: center;
+            background-color: #333;
+            font-family:Sans-serif;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="video-background">
+        <video autoplay muted loop>
+            <source src="prada.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+    <div class="content">
+        <header>
+            <h1>K-Pop Fan Page</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="albums.html">Albums</a></li>
+                    <li><a href="gallery.html">merch</a></li>
+                    <li><a href="gallery.html">boy Groups</a></li>
+                    <li><a href="gallery.html">girl Groups</a></li>
+                    <li><a href="contact.html">Korean Culture</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <section class="hero">
+            <h2>Welcome to the K-Pop Fan Page!</h2>
+            <p>Your ultimate destination for all things K-Pop!</p>
+            <a href="more.html" class="button">Explore More</a>
+        </section>
+
+        <section class="info">
+            <h2>About K-Pop</h2>
+            <p>K-Pop, or Korean pop music, is a genre that has taken the world by storm. With its catchy tunes, impressive choreography, and dedicated fanbase, K-Pop has become a global phenomenon.</p>
+            <p>From BTS to BLACKPINK, discover the artists that are shaping the future of music.</p>
+            
+        </section>
+
+        <footer>
+            <p>&copy; 2023 K-Pop Fan Page</p>
+            <img src="boysphotos/EXO.jpg" >
+        </footer>
+
+        <footer class="secondary-footer">
+            <!-- Follow Us Section -->
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <img src="https://wallpapers-clan.com/wp-content/uploads/2022/01/grayscale-instagram-icon-aesthetic.png" alt="Instagram">
+                    <img src="https://i.pinimg.com/originals/8b/c4/2c/8bc42cf10d82b1ea038994d3e6f6abf0.jpg" alt="Twitter">
+                </div>
+                <p>Contact Us</p>
+                <a href="mailto:info@kpopultimate.com">info@kpopultimate.com</a>
+            </div>
+
+            <!-- Advertise Section -->
+            <div class="footer-section">
+                <h3>Want to Advertise with Us?</h3>
+                <p>Do you love the content at KpopUltimate.com? Want to get your K-Pop merch in front of the world's truest fans?</p>
+                <p>Contact us at <a href="mailto:info@kpopultimate.com">info@kpopultimate.com</a> for partnership options.</p>
+            </div>
+
+            <!-- Translate Section -->
+            <div class="footer-section">
+                <h3>Translate</h3>
+                <div class="translate-box">
+                    <label for="language-select" style="display: block; margin-bottom: 10px;">Select Language:</label>
+                    <select id="language-select" name="select-language" style="padding: 5px; border-radius: 2px; border: 1px solid #fff; background-color: #626060; color: white;">
+                        <option value="english">English</option>
+                        <option value="hindi">Hindi</option>
+                        <option value="korean">Korean</option>
+                    </select>
+                </div>
+                <p>Notice:</p>
+                <p>KpopUltimate.com is not responsible for external links.</p>
+            </div>
+
+            <!-- Search Section -->
+            <div class="footer-section">
+                <h3>Search</h3>
+                <p>Search our site for your favorite K-pop groups, concerts, conventions, and more!</p>
+                <input type="text" placeholder="Search...">
+            </div>
+        </footer>
+
+    </div>
+</body>
+</html>
