@@ -1,150 +1,3 @@
-body, html {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
-    background-color:transparent;
-}
-#background-video {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: -1;  
-}
-
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-.header-section {
-    position: relative;
-    width: 100%;
-    height: 400px;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-
-.header-section video {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: -1;
-}
-
-.text-content {
-    color: rgb(17, 16, 16);
-    font-family: 'Comic Sans MS', cursive, sans-serif;
-    font-size: 3rem;
-    position: absolute;
-    left: 600px;
-    top: 100px;
-}
-
-.text-content small {
-    display: block;
-    font-size: 1rem;
-    margin-top: 10px;
-    color: gray;
-}
-
-.content-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 100px;
-    gap: 40px; 
-    position: absolute;
-    top: 200px;
-}
-
-.group {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    gap: 20px;
-    width: 100%;
-}
-
-.group .spotify {
-    width: 300px;
-    height: 380px;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.group .spotify iframe {
-    width: 100%;
-    height: 100%;
-    border: none;
-}
-
-.group .instagram-card {
-    width:320px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    height:450px;
-}
-
-/* Restrict Instagram embed height */
-.instagram-embed {
-    height: 500px; /* Adjust this value as needed */
-    overflow: hidden;
-}
-
-.instagram-card .info {
-    padding: 10px;
-}
-
-.instagram-card .info h3 {
-    margin: 5px 0;
-    font-size: 1.2rem;
-    color: #333;
-}
-
-.instagram-card .info p {
-    margin: 5px 0;
-    font-size: 0.9rem;
-    color: #555;
-}
-
-.group .description {
-    flex: 1;
-    text-align: center;
-}
-
-.group .description h2 {
-    font-size: 2rem;
-    margin-bottom: 10px;
-}
-
-.group .description p {
-    font-size: 1rem;
-    color: #666;
-}
-
-.group .instagram-card{
-    border:1px dotted rgb(117, 115, 115);
-}
-
 .top-left {
     position: absolute;
     top: 20px;
@@ -384,4 +237,82 @@ ul {
     .top-right ul {
         gap: 10px;
     }
+} 
+.s {
+    margin: 0;
+    height: 900px;
+    width: 1000px;
+    display: grid;
+    place-content: center;
+    position: relative;
+    background: white;
+    overflow: hidden;
+    position: absolute;
+    top: 150px; 
+    left: 260px; 
+    
+}
+
+
+.gallery {
+    --s: 150px; /* control the size of the images */
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    gap: 5px;
+    position: absolute;
+    top: 100px;
+    left: 270px;
+    
+}
+
+.gallery input {
+    position: absolute;
+    border: 2px solid #000;
+    border-radius: 50%;
+    inset: calc(50% - var(--s)/3);
+    cursor: pointer;
+    --g: linear-gradient(#000 0 0) no-repeat;
+    background: var(--g) 50%/var(--b, 0%) 3px, var(--g) 50%/3px var(--b, 0%);
+    transition: 1.5s;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.gallery > img {
+    width: var(--s);
+    aspect-ratio: 1;
+    object-fit: cover;
+    transform: scale(.1);
+    filter: brightness(0);
+    pointer-events: none;
+    transform-origin: var(--x) var(--y);
+    transition: 1s calc((var(--i) - 1) * .1s);
+}
+
+.gallery > img:nth-of-type(1) { --i:1; --x: 150%; --y:150%; }
+.gallery > img:nth-of-type(2) { --i:2; --x: 50%; --y:150%; }
+.gallery > img:nth-of-type(3) { --i:3; --x: -50%; --y:150%; }
+.gallery > img:nth-of-type(4) { --i:4; --x: 150%; --y:50%; }
+.gallery > img:nth-of-type(5) { --i:5 }
+.gallery > img:nth-of-type(6) { --i:6; --x: -50%; --y:50%; }
+.gallery > img:nth-of-type(7) { --i:7; --x: 150%; --y:-50%; }
+.gallery > img:nth-of-type(8) { --i:8; --x: 50%; --y:-50%; }
+.gallery > img:nth-of-type(9) { --i:9; --x: -50%; --y:-50%; }
+
+.gallery > input:checked ~ img {
+    transform: scale(1);
+    filter: brightness(1);
+    pointer-events: initial;
+}
+
+.gallery > input:checked {
+    transform: translateY(calc(1.75 * var(--s))) scale(.5) rotate(45deg);
+    --b: 70%;
+}
+.bts{
+    font-size: 100px;
+    position: absolute;
+    left: 340px;
+    top: 600px;
 }
