@@ -4,7 +4,7 @@ body {
 
 header h1 {
     margin: auto;
-    margin-left: 450px;
+    margin-left: 630px;
     font-style: oblique;
     height: 90px;
     padding-top: 50px;
@@ -29,29 +29,29 @@ div img {
 
 .header1 {
     display: inline-block;
-    margin-left: 270px;
+    margin-left: 350px;
     margin-right: 100px;
 }
 
 .header2 {
     display: inline-block;
-    margin-left: 430px;
+    margin-left: 585px;
 }
 
 #momo {
     display: inline-block;
-    margin-left: 380px;
+    margin-left: 440px;
 }
 
 #stray {
     display: inline-block;
-    margin-left: 250px;
-    margin-right: 100px;
+    margin-left: 320px;
+    margin-right: 200px;
 }
 
 #idle {
     display: inline-block;
-    margin-left: 450px;
+    margin-left: 605px;
 }
 
 footer {
@@ -98,8 +98,8 @@ video.background-video {
     z-index: -1;
 }
 
-div {
-    color: rgb(223, 187, 244)
+a {
+    color: rgb(210, 136, 253)
 }
 
 .photos {
@@ -116,4 +116,9 @@ img:hover {
     margin-bottom: 10px;
     font-family: Sans-serif;
     color: white
+}
+
+a:hover {
+    transform: scale(2);
+    color: yellow
 }
