@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Opening Soon Animation</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column; 
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(120deg, #000000, #1a1a1a, #0f0f0f);
+            font-family: 'Arial', sans-serif;
+            overflow: hidden;
+        }
+
+        h1 {
+            font-size: 5rem;  
+            color: #fff;
+            position: relative;
+            text-transform: uppercase;
+            animation: myAnim 3s infinite ease-in-out;
+            font-weight: bold;
+            margin: 0; 
+        }
+
+        @keyframes myAnim {
+            0% {
+                opacity: 0;
+                transform: scale(0.3);
+            }
+
+            50% {
+                opacity: 1;
+                transform: scale(2);
+            }
+
+            100% {
+                opacity: 0;
+                transform: scale(2.5); 
+            }
+        }
+
+        .back-button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            color: #fff;
+            background-color: #ff007f; 
+            border: none;
+            border-radius: 5px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+
+        .back-button:hover {
+            background-color: #ff3399; 
+            transform: translateY(-3px); 
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .back-button:active {
+            transform: translateY(1px); 
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+    <h1>OPENING SOON</h1>
+    <form action="starts.html">
+        <button class="back-button" onclick="history.back()">Back</button>
+    </form>
+</body>
+</html>

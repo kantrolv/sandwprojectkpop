@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
 
-/* Applying Montserrat Font */
+
 body,
 html {
     font-family: 'Montserrat', sans-serif;
@@ -9,13 +9,13 @@ html {
     height: 100%;
     overflow: hidden;
     background-color: black;
-    /* Black background at the start */
+
 }
 
 
 
 
-/* Video Container */
+
 .video-container {
     position: absolute;
     top: 0;
@@ -26,12 +26,12 @@ html {
     align-items: center;
     justify-content: center;
     visibility: hidden;
-    /* Initially hidden */
-    animation: showAfterIntro 3s forwards;
-    /* Make visible after the intro fades out */
+
+    animation: showAfterIntro 2s forwards;
+
 }
 
-/* Background Video */
+
 .background-video {
     position: absolute;
     top: 0;
@@ -40,12 +40,12 @@ html {
     height: 100%;
     object-fit: cover;
     opacity: 0;
-    /* Initially invisible */
+
     animation: fadeInVideo 2s ease-in-out 3s forwards;
-    /* Fade in after 3 seconds */
+
 }
 
-/* Top Left Name */
+
 .top-left {
     position: absolute;
     top: 20px;
@@ -58,7 +58,7 @@ html {
     animation: showAfterIntro 3s forwards;
 }
 
-/* Top Right Navigation */
+
 .top-right {
     position: absolute;
     top: 20px;
@@ -73,7 +73,7 @@ html {
     padding: 0;
     display: flex;
     gap: 20px;
-    /* Adds spacing between the links */
+
 }
 
 .top-right li {
@@ -97,7 +97,7 @@ html {
     color: #EDD1E0;
 }
 
-/* Top Right Navigation */
+
 .top-right {
     position: absolute;
     top: 20px;
@@ -116,10 +116,10 @@ html {
 
 .top-right li {
     position: relative;
-    /* For dropdown positioning */
+
 }
 
-/* Navigation Links */
+
 .top-right a {
     text-decoration: none;
     font-size: 1.3rem;
@@ -129,33 +129,27 @@ html {
     transition: transform 0.2s ease-in-out, color 0.3s ease;
 }
 
-/* Hover Effect for Links */
+
 .top-right a:hover {
     transform: scale(1.1);
-    /* Slightly pop-up effect */
+
     color: #EDD1E0;
 }
 
-/* Dropdown Container */
+
 .dropdown-container {
     position: relative;
 }
 
-/* Dropdown Content */
+
 .dropdown-content {
     display: none;
-    /* Hidden by default */
     position: absolute;
     background-color: #1f1f1f;
-    /* Matches dark theme */
     min-width: 160px;
-    /* Minimum width of dropdown */
     z-index: 1;
-    /* Ensure it appears above other elements */
     border-radius: 8px;
-    /* Rounded corners */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-    /* Subtle shadow */
 }
 
 /* Show the dropdown on hover */
@@ -294,4 +288,51 @@ ul {
     .top-right ul {
         gap: 10px;
     }
+}
+/* Explore Button Container */
+.explore-container {
+  position: fixed; /* Keep the button in a fixed position on the screen */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 70%; /* Position the button 70% from the top */
+  left: 50%; /* Center the button horizontally */
+  transform: translateX(-50%); /* Center the button horizontally */
+  z-index: 10;
+  visibility: hidden; /* Initially hidden */
+  animation: showButton 1s ease-in-out forwards 6s; /* Show after 3 seconds, animation duration of 6 seconds */
+}
+
+/* Explore Button */
+.explore-button {
+  padding: 20px 40px;
+  font-size: 1.5rem;
+  background-color: #EDD1E0;
+  color: #333;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: bold;
+  transition: background-color 0.3s;
+  transition: transform 0.5s ease, background-color 0.5s ease;
+}
+
+.explore-button:hover {
+  background-color: #F0DEDE;
+}
+.explore-button:active{
+    transform: scale(1);
+    background-color: aqua;
+}
+/* Animation for showing the button */
+@keyframes showButton {
+  0% {
+    visibility: hidden;
+    opacity: 0;
+  }
+  100% {
+    visibility: visible;
+    opacity: 1;
+  }
 }
