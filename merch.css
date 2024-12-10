@@ -11,7 +11,7 @@ header h1 {
 }
 
 header {
-    background-color: rgb(223, 187, 244);
+    background-color: transparent;
     margin-bottom: 10px;
 }
 
@@ -52,36 +52,6 @@ div img {
 #idle {
     display: inline-block;
     margin-left: 605px;
-}
-
-footer {
-    background-color: grey;
-}
-
-.footer-section {
-    flex: 1 1 calc(25% - 20px);
-    min-width: 200px;
-    font-family: Sans-serif;
-}
-
-.footer-section p,
-.footer-section a {
-    font-size: 16px;
-    color: white;
-    text-decoration: none;
-    font-family: Sans-serif;
-}
-
-.footer-section img {
-    width: 24px;
-    height: 24px;
-    margin-right: 10px;
-}
-
-.footer-section .social-icons {
-    display: flex;
-    align-items: center;
-    font-family: Sans-serif;
 }
 
 .content {
