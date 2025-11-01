@@ -4,27 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>K-Pop Boy Groups</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
         /* General Reset */
         body, html {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: Arial, sans-serif;
-            background-color:lavender;
+            font-family: 'Poppins', 'Segoe UI', Arial, sans-serif;
+            background-color: transparent;
+            min-height: 100vh;
         }
 
         /* Header Section Styling */
         .header-section {
             position: relative;
             width: 100%;
-            height: 400px;
+            height: 450px;
             overflow: hidden;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             text-align: center;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
         }
 
         .header-section video {
@@ -36,19 +39,40 @@
             height: 100%;
             object-fit: cover;
             z-index: -1;
+            will-change: opacity;
+            transform: translate(-50%, -50%) translateZ(0);
+            backface-visibility: hidden;
         }
 
         .header-section .text-content {
-            color: black;
-            font-family: 'Comic Sans MS', cursive, sans-serif;
-            font-size: 3rem;
+            color: #fff;
+            font-family: 'Poppins', sans-serif;
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            font-weight: 700;
+            text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.7);
+            z-index: 1;
+            letter-spacing: 2px;
+            line-height: 1.2;
+            animation: fadeInDown 1s ease-out;
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         .header-section .text-content small {
             display: block;
-            font-size: 1rem;
-            margin-top: 10px;
-            color: gray;
+            font-size: clamp(0.9rem, 2vw, 1.2rem);
+            margin-top: 15px;
+            color: rgba(255, 255, 255, 0.9);
+            font-weight: 300;
         }
 
         /* Content Section Styling */
@@ -56,92 +80,345 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            padding: 20px;
-            gap: 40px; /* Space between each group */
+            padding: 50px 20px;
+            gap: 60px;
+            max-width: 1400px;
+            width: 100%;
+            margin: 0 auto;
+            box-sizing: border-box;
         }
 
         .group {
             display: flex;
             flex-direction: row;
-            justify-content: space-around;
+            justify-content: center;
             align-items: center;
-            gap: 20px;
+            gap: 30px;
             width: 100%;
+            max-width: 1400px;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            animation: fadeInUp 0.8s ease-out both;
+            box-sizing: border-box;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .group:nth-child(1) { animation-delay: 0.1s; }
+        .group:nth-child(2) { animation-delay: 0.2s; }
+        .group:nth-child(3) { animation-delay: 0.3s; }
+        .group:nth-child(4) { animation-delay: 0.4s; }
+        .group:nth-child(5) { animation-delay: 0.5s; }
+
+        .group:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 50px rgba(0, 0, 0, 0.3);
         }
 
         .group .spotify {
-            width: 300px;
-            height: 380px;
-            border-radius: 8px;
+            width: 350px;
+            min-width: 300px;
+            height: 400px;
+            border-radius: 15px;
             overflow: hidden;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+            transition: transform 0.3s ease;
+        }
+
+        .group .spotify:hover {
+            transform: scale(1.05);
         }
 
         .group .spotify iframe {
             width: 100%;
             height: 100%;
             border: none;
+            border-radius: 15px;
         }
 
         .group .instagram-card {
-            width:320px;
-            border: 1px solid #ddd;
-            border-radius: 8px;
+            width: 350px;
+            min-width: 300px;
+            border: 2px solid #e0e0e0;
+            border-radius: 15px;
             overflow: hidden;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            height:450px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+            height: 450px;
+            transition: transform 0.3s ease, border-color 0.3s ease;
+            background: #fff;
+        }
+
+        .group .instagram-card:hover {
+            transform: scale(1.03);
+            border-color: #764ba2;
         }
 
         /* Restrict Instagram embed height */
         .instagram-embed {
-            height: 500px; /* Adjust this value as needed */
+            height: 500px;
             overflow: hidden;
         }
 
         .instagram-card .info {
-            padding: 10px;
+            padding: 15px;
+            background: linear-gradient(to bottom, #f8f9fa, #fff);
         }
 
         .instagram-card .info h3 {
             margin: 5px 0;
-            font-size: 1.2rem;
+            font-size: 1.3rem;
             color: #333;
+            font-weight: 600;
         }
 
         .instagram-card .info p {
             margin: 5px 0;
-            font-size: 0.9rem;
-            color: #555;
+            font-size: 0.95rem;
+            color: #666;
         }
 
         .group .description {
             flex: 1;
             text-align: center;
+            padding: 20px;
+            max-width: 400px;
         }
 
         .group .description h2 {
-            font-size: 2rem;
-            margin-bottom: 10px;
+            font-size: clamp(1.8rem, 4vw, 2.5rem);
+            margin-bottom: 15px;
+            color: #764ba2;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        .group .description .mahi {
+            font-size: clamp(1.8rem, 4vw, 2.5rem);
+            margin-bottom: 15px;
+            color: #764ba2;
+            font-weight: 700;
+            letter-spacing: 1px;
         }
 
         .group .description p {
+            font-size: clamp(0.95rem, 2vw, 1.1rem);
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .group .description a {
+            display: inline-block;
+            padding: 12px 30px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(118, 75, 162, 0.3);
             font-size: 1rem;
-            color: #666;
         }
 
-        .group .instagram-card{
-            border:1px dotted rgb(117, 115, 115);
+        .group .description a:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(118, 75, 162, 0.4);
+            background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
         }
 
-        
+        /* Responsive Design */
+        @media (max-width: 1200px) {
+            .content-section {
+                max-width: 95%;
+                padding: 40px 20px;
+            }
+            
+            .group {
+                max-width: 100%;
+                padding: 35px;
+            }
+        }
+
+        @media (max-width: 1024px) {
+            .group {
+                flex-direction: column;
+                padding: 30px;
+                gap: 25px;
+            }
+            
+            .group .spotify,
+            .group .instagram-card {
+                width: 100%;
+                max-width: 450px;
+                min-width: auto;
+            }
+            
+            .group .description {
+                max-width: 100%;
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .header-section {
+                height: 350px;
+            }
+            
+            .header-section .text-content {
+                font-size: clamp(1.8rem, 6vw, 3rem);
+                padding: 0 20px;
+            }
+            
+            .content-section {
+                padding: 30px 15px;
+                gap: 40px;
+            }
+            
+            .group {
+                padding: 25px 20px;
+                gap: 20px;
+            }
+            
+            .group .spotify,
+            .group .instagram-card {
+                max-width: 100%;
+                height: auto;
+            }
+            
+            .group .spotify {
+                height: 380px;
+                min-height: 380px;
+            }
+            
+            .group .instagram-card {
+                height: auto;
+            }
+            
+            .group .description h2,
+            .group .description .mahi {
+                font-size: clamp(1.5rem, 5vw, 2rem);
+            }
+            
+            .group .description p {
+                font-size: clamp(0.9rem, 2.5vw, 1rem);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .header-section {
+                height: 300px;
+            }
+            
+            .header-section .text-content {
+                font-size: clamp(1.5rem, 7vw, 2.5rem);
+                padding: 0 15px;
+                letter-spacing: 1px;
+            }
+            
+            .content-section {
+                padding: 20px 10px;
+                gap: 30px;
+            }
+            
+            .group {
+                padding: 20px 15px;
+                gap: 15px;
+                border-radius: 15px;
+            }
+            
+            .group .spotify {
+                height: 350px;
+                min-height: 350px;
+                width: 100%;
+            }
+            
+            .group .instagram-card {
+                width: 100%;
+                height: auto;
+            }
+            
+            .group .description {
+                padding: 15px;
+            }
+            
+            .group .description h2,
+            .group .description .mahi {
+                font-size: clamp(1.3rem, 6vw, 1.8rem);
+                margin-bottom: 10px;
+            }
+            
+            .group .description p {
+                font-size: clamp(0.85rem, 3vw, 0.95rem);
+                margin-bottom: 15px;
+            }
+            
+            .group .description a {
+                padding: 10px 20px;
+                font-size: 0.9rem;
+            }
+            
+            .instagram-card .info {
+                padding: 12px;
+            }
+            
+            .instagram-card .info h3 {
+                font-size: 1.1rem;
+            }
+            
+            .instagram-card .info p {
+                font-size: 0.85rem;
+            }
+        }
+
+        @media (max-width: 360px) {
+            .header-section {
+                height: 250px;
+            }
+            
+            .header-section .text-content {
+                font-size: clamp(1.2rem, 8vw, 2rem);
+            }
+            
+            .content-section {
+                padding: 15px 8px;
+                gap: 25px;
+            }
+            
+            .group {
+                padding: 15px 10px;
+            }
+            
+            .group .spotify {
+                height: 320px;
+                min-height: 320px;
+            }
+            
+            .group .description a {
+                padding: 8px 16px;
+                font-size: 0.85rem;
+            }
+        }
     </style>
 </head>
 <body>
 
 <div class="header-section">
     <!-- Video Background -->
-    <video autoplay muted loop>
-        <source src="file:///Users/mahisawner/Downloads/12538071_3840_2160_24fps.mp4" type="video/mp4">
+    <video autoplay muted loop playsinline preload="metadata">
+        <source src="boyandgirl.html.mp4" type="video/mp4">
         Your browser does not support the video tag.
     </video>
 

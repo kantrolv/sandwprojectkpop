@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="gallery.css">
 </head>
 <body>
-    <video autoplay muted loop id="background-video">
+    <video autoplay muted loop playsinline preload="metadata" id="background-video">
         <source src="boyandgirl.html.mp4" type="video/mp4">
         Your browser does not support the video tag.
     </video>
@@ -18,7 +18,8 @@
       <nav class="top-right">
           <ul>
             <li><a href="starts.html">Home</a></li>
-            <li><a href="#merch">Merch</a></li>
+            <!-- <li><a href="#merch">Merch</a></li> -->
+             <li><a href="merch.html">Merch</a></li>
             <li><a href="gallery.html">Gallery</a></li>
             <li class="dropdown-container">
               <a href="#groups" class="dropdown-label">Groups</a>
@@ -29,30 +30,37 @@
             </li>
           </ul>
       </nav>
-          <!-- Text Content -->
-    <!-- <h1 class="text-content">The Top Kpop<br>Girl Groups</h1> -->
-    
-    <div class="s">
-    
-        <div class="gallery">
-            <input type="checkbox">
-            <img src="WhatsApp Image 2024-12-10 at 23.03.14.jpeg" alt="a forest after an apocalypse">
-            <img src="WhatsApp Image 2024-12-10 at 23.03.15 (1).jpeg" alt="a waterfall and many rocks">
-            <img src="WhatsApp Image 2024-12-10 at 23.03.15 (2).jpeg" alt="a house on a mountain">
-            <img src="WhatsApp Image 2024-12-10 at 23.03.16 (1).jpeg" alt="some pink flowers">
-            <img src="WhatsApp Image 2024-12-10 at 23.03.16 (2).jpeg" alt="big rocks with some trees">
-            <img src="WhatsApp Image 2024-12-10 at 23.03.16.jpeg" alt="a waterfall, a lot of trees and a great view from the sky">
-            <img src="WhatsApp Image 2024-12-10 at 23.03.17.jpeg" alt="a cool landscape">
-            <img src="WhatsApp Image 2024-12-10 at 23.03.16 (2).jpeg" alt="inside a town between two big buildings">
-            <img src="Geffen Records (@GeffenRecords) on X.jpeg" alt="a great view of the sea above the mountain">
+    <!-- Main Gallery Container -->
+    <div class="gallery-wrapper">
+        <div class="gallery-header">
+            <h1 class="gallery-title">Gallery</h1>
+            <p class="gallery-subtitle">BTS Collection</p>
         </div>
-        <div class="bts">
-            <h2>BTS</h2>
+        
+        <div class="s">
+            <div class="gallery">
+                <img src="WhatsApp Image 2024-12-10 at 23.03.14.jpeg" alt="BTS Photo">
+                <img src="WhatsApp Image 2024-12-10 at 23.03.15 (1).jpeg" alt="BTS Photo">
+                <img src="WhatsApp Image 2024-12-10 at 23.03.15 (2).jpeg" alt="BTS Photo">
+                <img src="WhatsApp Image 2024-12-10 at 23.03.16 (1).jpeg" alt="BTS Photo">
+                <img src="WhatsApp Image 2024-12-10 at 23.03.16 (2).jpeg" alt="BTS Photo">
+                <img src="WhatsApp Image 2024-12-10 at 23.03.16.jpeg" alt="BTS Photo">
+                <img src="WhatsApp Image 2024-12-10 at 23.03.17.jpeg" alt="BTS Photo">
+                <img src="WhatsApp Image 2024-12-10 at 23.03.16 (2).jpeg" alt="BTS Photo">
+                <img src="Geffen Records (@GeffenRecords) on X.jpeg" alt="BTS Photo">
+            </div>
+            <div class="bts">
+                <h2>BTS</h2>
+            </div>
         </div>
     </div>
-    <div style="position: absolute; left: 620px; ">
-    </div>
-    <h1>Gallery Section</h1>
+    
+    <!-- Coming Soon Section -->
+    <div class="coming-soon-wrapper">
+        <div class="coming-soon-container">
+            <h2 class="coming-soon-title">Coming Soon Photos</h2>
+            <p class="coming-soon-text">Stay tuned for more amazing content!</p>
+        </div>
     </div>
 </body>
 </html>

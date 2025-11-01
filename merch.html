@@ -1,54 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>K-Pop Ultimate Merchandise</title>
     <link rel="stylesheet" href="merch.css">
 </head>
-
 <body>
-    <header class="content">
+    <video class="background-video" autoplay muted loop playsinline preload="metadata">
+        <source src="weewe.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    
+    <header>
         <h1>K-POP ULTIMATE</h1>
     </header>
-    <div>
-        <video class="background-video" autoplay muted loop>
-            <source src="weewe.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-        <div class="body" class="content">
-            <img id="Bts" src="boysphotos/BangTanSonyeondan.jpg" class="photos">
-            <img src="girlsphotos/Blackpink.jpeg" class="photos">
+    
+    <div class="merch-container">
+        <div class="product-grid">
+            <!-- Product Pair 1: BTS & BLACKPINK -->
+            <a href="bts_merch.html" class="product-item">
+                <div class="product-image-container">
+                    <img src="boysphotos/BangTanSonyeondan.jpg" alt="BTS Merchandise" class="photos">
+                </div>
+                <div class="product-title">
+                    <h3>BTS</h3>
+                </div>
+            </a>
+            
+            <a href="bp_merch.html" class="product-item">
+                <div class="product-image-container">
+                    <img src="girlsphotos/Blackpink.jpeg" alt="BLACKPINK Merchandise" class="photos">
+                </div>
+                <div class="product-title">
+                    <h3>BLACKPINK</h3>
+                </div>
+            </a>
+            
+            <!-- Product Pair 2: Stray Kids & Momo Land -->
+            <a href="sk_merch.html" class="product-item">
+                <div class="product-image-container">
+                    <img src="boysphotos/Stray Kids.jpg" alt="Stray Kids Merchandise" class="photos">
+                </div>
+                <div class="product-title">
+                    <h3>STRAY KIDS</h3>
+                </div>
+            </a>
+            
+            <a href="momo_merch.html" class="product-item">
+                <div class="product-image-container">
+                    <img src="girlsphotos/Momo Land.jpg" alt="Momo Land Merchandise" class="photos">
+                </div>
+                <div class="product-title">
+                    <h3>MOMO LAND</h3>
+                </div>
+            </a>
+            
+            <!-- Product Pair 3: TXT & G-IDLE -->
+            <a href="txt_merch.html" class="product-item">
+                <div class="product-image-container">
+                    <img src="boysphotos/TXT.jpg" alt="TXT Merchandise" class="photos">
+                </div>
+                <div class="product-title">
+                    <h3>TXT</h3>
+                </div>
+            </a>
+            
+            <a href="g(idle)_merch.html" class="product-item">
+                <div class="product-image-container">
+                    <img src="girlsphotos/g(idle).jpg" alt="G-IDLE Merchandise" class="photos">
+                </div>
+                <div class="product-title">
+                    <h3>G-IDLE</h3>
+                </div>
+            </a>
         </div>
-        <a href="bts_merch.html">
-            <h3 class="header1" class="content">BTS</h3>
-        </a>
-        <a href="bp_merch.html">
-            <h3 class="header2" class="content">BLACKPINK</h3>
-        </a>
-        <div class="body" class="content">
-            <img id="Bts" src="boysphotos/Stray Kids.jpg" class="photos">
-            <img src="girlsphotos/Momo Land.jpg" class="photos">
-        </div>
-        <a href="sk_merch.html">
-            <h3 id="stray" class="content">STRAY KIDS</h3>
-        </a>
-        <a href="momo_merch.html">
-            <h3 id="momo" class="content">MOMO LAND</h3>
-        </a>
-        <div class="body" class="content">
-            <img id="Bts" src="boysphotos/TXT.jpg" class="photos">
-            <img src="girlsphotos/g(idle).jpg" class="photos">
-        </div>
-        <a href="txt_merch.html">
-            <h3 class="header1" class="content">TXT</h3>
-        </a>
-        <a href="g(idle)_merch.html">
-            <h3 id="idle" class="content">G-IDLE</h3>
+    </div>
+    
+    <div class="back-button-container">
+        <a href="starts.html">
+            <button>BACK</button>
         </a>
     </div>
-    <a href="index.html"><button>BACK</button></a>
 </body>
-
 </html>
